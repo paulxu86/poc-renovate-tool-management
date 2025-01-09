@@ -1,0 +1,43 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    ":semanticCommits"
+  ],
+  "packageRules": [
+    {
+      "matchManagers": ["bazel"],
+      "enabled": true,
+      "groupName": "Bazel dependencies"
+    },
+    {
+      "matchDatasources": ["maven"],
+      "matchPackagePatterns": ["^com.fasterxml.jackson"],
+      "groupName": "Jackson dependencies"
+    },
+    {
+      "matchDatasources": ["maven"],
+      "matchPackagePatterns": ["^org.springframework"],
+      "groupName": "Spring dependencies"
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "enabled": true,
+      "groupName": "GitHub Actions",
+      "pinDigests": true
+    },
+    {
+      "matchPackagePatterns": ["^rules_"],
+      "enabled": true,
+      "groupName": "Bazel rules"
+    }
+  ],
+  "bazelisk": {
+    "enabled": true
+  },
+  "ignorePaths": ["**/node_modules/**"],
+  "prConcurrentLimit": 5,
+  "prHourlyLimit": 2,
+  "semanticCommits": "enabled",
+  "labels": ["dependencies"]
+}
