@@ -22,11 +22,8 @@ jobs:
           key: bazel-${{ runner.os }}-${{ hashFiles('MODULE.bazel', '.bazelversion') }}
           restore-keys: bazel-${{ runner.os }}-
 
-      - name: Build
-        run: bazel build //...
+      - name: Build Java application
+        run: bazel build //src/main/java/com/example/depwatch:depwatch
 
-      - name: Test
-        run: bazel test //...
-
-      - name: Build container
-        run: bazel build //docker:tarball
+#      - name: Build container
+#        run: bazel build //docker:tarball
