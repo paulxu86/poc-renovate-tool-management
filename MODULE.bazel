@@ -21,7 +21,9 @@ maven.install(
         "com.fasterxml.jackson.core:jackson-annotations:2.14.2",
         "com.fasterxml.jackson.core:jackson-databind:2.14.2",
     ],
-    fail_if_repin_required = False,
+    fail_if_repin_required = True,
+    fetch_sources = True,
+    lock_file = "//:rules_jvm_external~~maven~maven_install.json",
     repositories = [
         "https://repo.maven.apache.org/maven2/",
     ],
@@ -36,6 +38,9 @@ oci.pull(
     name = "java_base",
     digest = "sha256:3718cf143b7aaec37742a61f49aba0ac9d67508e32cd98aaca0d6af422c05a31",  # ARM64 digest
     image = "amazoncorretto",
-    platforms = ["linux/arm64/v8"],
+    platforms = [
+        "linux/amd64",
+        "linux/arm64/v8",
+    ],
 )
 use_repo(oci, "java_base")

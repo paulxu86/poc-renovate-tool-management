@@ -36,8 +36,8 @@
     "enabled": true
   },
   "ignorePaths": ["**/node_modules/**"],
-  "prConcurrentLimit": 5,
-  "prHourlyLimit": 2,
+  "prConcurrentLimit": 30,
+  "prHourlyLimit": 7,
   "semanticCommits": "enabled",
   "labels": ["dependencies"]
 }
