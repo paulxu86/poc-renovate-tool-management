@@ -31,6 +31,8 @@ maven.install(
         # Existing Spring Boot and Jackson dependencies
         "org.springframework.boot:spring-boot-starter:%s" % SPRING_BOOT_VERSION,
         "org.springframework.boot:spring-boot-starter-web:%s" % SPRING_BOOT_VERSION,
+        "com.fasterxml.jackson.core:jackson-annotations:2.18.2",
+        "com.fasterxml.jackson.core:jackson-databind:2.18.2",
         "com.fasterxml.jackson.core:jackson-annotations:2.14.2",
         "com.fasterxml.jackson.core:jackson-databind:2.14.2",
         # Kotlin dependencies
