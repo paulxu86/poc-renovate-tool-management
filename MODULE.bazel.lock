@@ -1,6 +1,6 @@
 {
   "lockFileVersion": 3,
-  "moduleFileHash": "dcd64fc4a368ff873043bf6080efb0ebc38b2e6dfc27e5a9ccebb94d31f06f8f",
+  "moduleFileHash": "5f9046332319f953eb9b456aa29b96b1c633e15041984431dea2d4a80ec00df1",
   "flags": {
     "cmdRegistries": [
       "https://bcr.bazel.build/"
@@ -25,12 +25,44 @@
       "toolchainsToRegister": [],
       "extensionUsages": [
         {
+          "extensionBzlFile": "@rules_kotlin//kotlin:extensions.bzl",
+          "extensionName": "kotlin",
+          "usingModule": "<root>",
+          "location": {
+            "file": "@@//:MODULE.bazel",
+            "line": 19,
+            "column": 23
+          },
+          "imports": {
+            "kotlin_language_version": "kotlin_language_version"
+          },
+          "devImports": [],
+          "tags": [
+            {
+              "tagName": "language_version",
+              "attributeValues": {
+                "name": "kotlin_language_version",
+                "api_version": "1.9",
+                "language_version": "1.9"
+              },
+              "devDependency": false,
+              "location": {
+                "file": "@@//:MODULE.bazel",
+                "line": 20,
+                "column": 24
+              }
+            }
+          ],
+          "hasDevUseExtension": false,
+          "hasNonDevUseExtension": true
+        },
+        {
           "extensionBzlFile": "@rules_jvm_external//:extensions.bzl",
           "extensionName": "maven",
           "usingModule": "<root>",
           "location": {
             "file": "@@//:MODULE.bazel",
-            "line": 15,
+            "line": 27,
             "column": 22
           },
           "imports": {
@@ -45,9 +77,12 @@
                 "artifacts": [
                   "org.springframework.boot:spring-boot-starter:3.2.0",
                   "org.springframework.boot:spring-boot-starter-web:3.2.0",
-                  "com.fasterxml.jackson.core:jackson-annotations:2.14.2",
-                  "com.fasterxml.jackson.core:jackson-databind:2.14.2"
+                  "com.fasterxml.jackson.core:jackson-annotations:2.18.2",
+                  "com.fasterxml.jackson.core:jackson-databind:2.18.2",
+                  "org.jetbrains.kotlin:kotlin-stdlib:1.9.0",
+                  "org.jetbrains.kotlin:kotlin-reflect:1.9.0"
                 ],
+                "fail_if_repin_required": true,
                 "fetch_sources": true,
                 "lock_file": "//:rules_jvm_external~~maven~maven_install.json",
                 "repositories": [
@@ -57,7 +92,7 @@
               "devDependency": false,
               "location": {
                 "file": "@@//:MODULE.bazel",
-                "line": 16,
+                "line": 28,
                 "column": 14
               }
             }
@@ -71,7 +106,7 @@
           "usingModule": "<root>",
           "location": {
             "file": "@@//:MODULE.bazel",
-            "line": 33,
+            "line": 50,
             "column": 20
           },
           "imports": {
@@ -93,7 +128,7 @@
               "devDependency": false,
               "location": {
                 "file": "@@//:MODULE.bazel",
-                "line": 36,
+                "line": 53,
                 "column": 9
               }
             }
@@ -108,6 +143,7 @@
         "rules_oci": "rules_oci@1.7.2",
         "rules_pkg": "rules_pkg@0.9.1",
         "aspect_bazel_lib": "aspect_bazel_lib@2.7.2",
+        "rules_kotlin": "rules_kotlin@1.9.0",
         "bazel_tools": "bazel_tools@_",
         "local_config_platform": "local_config_platform@_"
       }
@@ -791,6 +827,143 @@
         }
       }
     },
+    "rules_kotlin@1.9.0": {
+      "name": "rules_kotlin",
+      "version": "1.9.0",
+      "key": "rules_kotlin@1.9.0",
+      "repoName": "rules_kotlin",
+      "executionPlatformsToRegister": [],
+      "toolchainsToRegister": [
+        "//kotlin/internal:default_toolchain"
+      ],
+      "extensionUsages": [
+        {
+          "extensionBzlFile": "@rules_kotlin//src/main/starlark/core/repositories:bzlmod_setup.bzl",
+          "extensionName": "rules_kotlin_extensions",
+          "usingModule": "rules_kotlin@1.9.0",
+          "location": {
+            "file": "https://bcr.bazel.build/modules/rules_kotlin/1.9.0/MODULE.bazel",
+            "line": 14,
+            "column": 40
+          },
+          "imports": {
+            "buildkite_config": "buildkite_config",
+            "com_github_google_ksp": "com_github_google_ksp",
+            "com_github_jetbrains_kotlin": "com_github_jetbrains_kotlin",
+            "com_github_pinterest_ktlint": "com_github_pinterest_ktlint",
+            "kt_java_stub_template": "kt_java_stub_template",
+            "rules_android": "rules_android"
+          },
+          "devImports": [],
+          "tags": [],
+          "hasDevUseExtension": false,
+          "hasNonDevUseExtension": true
+        },
+        {
+          "extensionBzlFile": "@bazel_tools//tools/android:android_extensions.bzl",
+          "extensionName": "remote_android_tools_extensions",
+          "usingModule": "rules_kotlin@1.9.0",
+          "location": {
+            "file": "https://bcr.bazel.build/modules/rules_kotlin/1.9.0/MODULE.bazel",
+            "line": 28,
+            "column": 42
+          },
+          "imports": {
+            "android_gmaven_r8": "android_gmaven_r8",
+            "android_tools": "android_tools"
+          },
+          "devImports": [],
+          "tags": [],
+          "hasDevUseExtension": false,
+          "hasNonDevUseExtension": true
+        },
+        {
+          "extensionBzlFile": "@rules_jvm_external//:extensions.bzl",
+          "extensionName": "maven",
+          "usingModule": "rules_kotlin@1.9.0",
+          "location": {
+            "file": "https://bcr.bazel.build/modules/rules_kotlin/1.9.0/MODULE.bazel",
+            "line": 37,
+            "column": 22
+          },
+          "imports": {
+            "kotlin_rules_maven": "kotlin_rules_maven"
+          },
+          "devImports": [],
+          "tags": [
+            {
+              "tagName": "install",
+              "attributeValues": {
+                "name": "kotlin_rules_maven",
+                "artifacts": [
+                  "com.google.code.findbugs:jsr305:3.0.2",
+                  "junit:junit:4.13-beta-3",
+                  "com.google.protobuf:protobuf-java:3.6.0",
+                  "com.google.protobuf:protobuf-java-util:3.6.0",
+                  "com.google.guava:guava:27.1-jre",
+                  "com.google.truth:truth:0.45",
+                  "com.google.auto.service:auto-service:1.0.1",
+                  "com.google.auto.service:auto-service-annotations:1.0.1",
+                  "com.google.auto.value:auto-value:1.10.1",
+                  "com.google.auto.value:auto-value-annotations:1.10.1",
+                  "com.google.dagger:dagger:2.43.2",
+                  "com.google.dagger:dagger-compiler:2.43.2",
+                  "com.google.dagger:dagger-producers:2.43.2",
+                  "javax.annotation:javax.annotation-api:1.3.2",
+                  "javax.inject:javax.inject:1",
+                  "org.pantsbuild:jarjar:1.7.2",
+                  "org.jetbrains.kotlinx:atomicfu-js:0.15.2",
+                  "org.jetbrains.kotlinx:kotlinx-serialization-runtime:1.0-M1-1.4.0-rc"
+                ],
+                "fetch_sources": true,
+                "repositories": [
+                  "https://maven-central.storage.googleapis.com/repos/central/data/",
+                  "https://maven.google.com",
+                  "https://repo1.maven.org/maven2"
+                ]
+              },
+              "devDependency": false,
+              "location": {
+                "file": "https://bcr.bazel.build/modules/rules_kotlin/1.9.0/MODULE.bazel",
+                "line": 38,
+                "column": 14
+              }
+            }
+          ],
+          "hasDevUseExtension": false,
+          "hasNonDevUseExtension": true
+        }
+      ],
+      "deps": {
+        "platforms": "platforms@0.0.8",
+        "bazel_skylib": "bazel_skylib@1.5.0",
+        "rules_java": "rules_java@7.3.2",
+        "rules_python": "rules_python@0.23.1",
+        "rules_cc": "rules_cc@0.0.9",
+        "rules_jvm_external": "rules_jvm_external@6.0",
+        "rules_pkg": "rules_pkg@0.9.1",
+        "io_bazel_stardoc": "stardoc@0.5.6",
+        "rules_proto": "rules_proto@5.3.0-21.7",
+        "bazel_tools": "bazel_tools@_",
+        "local_config_platform": "local_config_platform@_"
+      },
+      "repoSpec": {
+        "bzlFile": "@bazel_tools//tools/build_defs/repo:http.bzl",
+        "ruleClassName": "http_archive",
+        "attributes": {
+          "name": "rules_kotlin~1.9.0",
+          "urls": [
+            "https://github.com/bazelbuild/rules_kotlin/releases/download/v1.9.0/rules_kotlin-v1.9.0.tar.gz"
+          ],
+          "integrity": "sha256-V2bx5Zms9VGqVvSdq5q5EIJpsDxVdJbFSsr0H5jiuNY=",
+          "strip_prefix": "",
+          "remote_patches": {
+            "https://bcr.bazel.build/modules/rules_kotlin/1.9.0/patches/module_dot_bazel_version.patch": "sha256-nDFDlp2ujd74k9mEF0Bh7pZqBt+CUCF2bZHIaFgM25g="
+          },
+          "remote_patch_strip": 1
+        }
+      }
+    },
     "bazel_tools@_": {
       "name": "bazel_tools",
       "version": "",
@@ -1101,143 +1274,6 @@
           "strip_prefix": "",
           "remote_patches": {},
           "remote_patch_strip": 0
-        }
-      }
-    },
-    "rules_kotlin@1.9.0": {
-      "name": "rules_kotlin",
-      "version": "1.9.0",
-      "key": "rules_kotlin@1.9.0",
-      "repoName": "rules_kotlin",
-      "executionPlatformsToRegister": [],
-      "toolchainsToRegister": [
-        "//kotlin/internal:default_toolchain"
-      ],
-      "extensionUsages": [
-        {
-          "extensionBzlFile": "@rules_kotlin//src/main/starlark/core/repositories:bzlmod_setup.bzl",
-          "extensionName": "rules_kotlin_extensions",
-          "usingModule": "rules_kotlin@1.9.0",
-          "location": {
-            "file": "https://bcr.bazel.build/modules/rules_kotlin/1.9.0/MODULE.bazel",
-            "line": 14,
-            "column": 40
-          },
-          "imports": {
-            "buildkite_config": "buildkite_config",
-            "com_github_google_ksp": "com_github_google_ksp",
-            "com_github_jetbrains_kotlin": "com_github_jetbrains_kotlin",
-            "com_github_pinterest_ktlint": "com_github_pinterest_ktlint",
-            "kt_java_stub_template": "kt_java_stub_template",
-            "rules_android": "rules_android"
-          },
-          "devImports": [],
-          "tags": [],
-          "hasDevUseExtension": false,
-          "hasNonDevUseExtension": true
-        },
-        {
-          "extensionBzlFile": "@bazel_tools//tools/android:android_extensions.bzl",
-          "extensionName": "remote_android_tools_extensions",
-          "usingModule": "rules_kotlin@1.9.0",
-          "location": {
-            "file": "https://bcr.bazel.build/modules/rules_kotlin/1.9.0/MODULE.bazel",
-            "line": 28,
-            "column": 42
-          },
-          "imports": {
-            "android_gmaven_r8": "android_gmaven_r8",
-            "android_tools": "android_tools"
-          },
-          "devImports": [],
-          "tags": [],
-          "hasDevUseExtension": false,
-          "hasNonDevUseExtension": true
-        },
-        {
-          "extensionBzlFile": "@rules_jvm_external//:extensions.bzl",
-          "extensionName": "maven",
-          "usingModule": "rules_kotlin@1.9.0",
-          "location": {
-            "file": "https://bcr.bazel.build/modules/rules_kotlin/1.9.0/MODULE.bazel",
-            "line": 37,
-            "column": 22
-          },
-          "imports": {
-            "kotlin_rules_maven": "kotlin_rules_maven"
-          },
-          "devImports": [],
-          "tags": [
-            {
-              "tagName": "install",
-              "attributeValues": {
-                "name": "kotlin_rules_maven",
-                "artifacts": [
-                  "com.google.code.findbugs:jsr305:3.0.2",
-                  "junit:junit:4.13-beta-3",
-                  "com.google.protobuf:protobuf-java:3.6.0",
-                  "com.google.protobuf:protobuf-java-util:3.6.0",
-                  "com.google.guava:guava:27.1-jre",
-                  "com.google.truth:truth:0.45",
-                  "com.google.auto.service:auto-service:1.0.1",
-                  "com.google.auto.service:auto-service-annotations:1.0.1",
-                  "com.google.auto.value:auto-value:1.10.1",
-                  "com.google.auto.value:auto-value-annotations:1.10.1",
-                  "com.google.dagger:dagger:2.43.2",
-                  "com.google.dagger:dagger-compiler:2.43.2",
-                  "com.google.dagger:dagger-producers:2.43.2",
-                  "javax.annotation:javax.annotation-api:1.3.2",
-                  "javax.inject:javax.inject:1",
-                  "org.pantsbuild:jarjar:1.7.2",
-                  "org.jetbrains.kotlinx:atomicfu-js:0.15.2",
-                  "org.jetbrains.kotlinx:kotlinx-serialization-runtime:1.0-M1-1.4.0-rc"
-                ],
-                "fetch_sources": true,
-                "repositories": [
-                  "https://maven-central.storage.googleapis.com/repos/central/data/",
-                  "https://maven.google.com",
-                  "https://repo1.maven.org/maven2"
-                ]
-              },
-              "devDependency": false,
-              "location": {
-                "file": "https://bcr.bazel.build/modules/rules_kotlin/1.9.0/MODULE.bazel",
-                "line": 38,
-                "column": 14
-              }
-            }
-          ],
-          "hasDevUseExtension": false,
-          "hasNonDevUseExtension": true
-        }
-      ],
-      "deps": {
-        "platforms": "platforms@0.0.8",
-        "bazel_skylib": "bazel_skylib@1.5.0",
-        "rules_java": "rules_java@7.3.2",
-        "rules_python": "rules_python@0.23.1",
-        "rules_cc": "rules_cc@0.0.9",
-        "rules_jvm_external": "rules_jvm_external@6.0",
-        "rules_pkg": "rules_pkg@0.9.1",
-        "io_bazel_stardoc": "stardoc@0.5.6",
-        "rules_proto": "rules_proto@5.3.0-21.7",
-        "bazel_tools": "bazel_tools@_",
-        "local_config_platform": "local_config_platform@_"
-      },
-      "repoSpec": {
-        "bzlFile": "@bazel_tools//tools/build_defs/repo:http.bzl",
-        "ruleClassName": "http_archive",
-        "attributes": {
-          "name": "rules_kotlin~1.9.0",
-          "urls": [
-            "https://github.com/bazelbuild/rules_kotlin/releases/download/v1.9.0/rules_kotlin-v1.9.0.tar.gz"
-          ],
-          "integrity": "sha256-V2bx5Zms9VGqVvSdq5q5EIJpsDxVdJbFSsr0H5jiuNY=",
-          "strip_prefix": "",
-          "remote_patches": {
-            "https://bcr.bazel.build/modules/rules_kotlin/1.9.0/patches/module_dot_bazel_version.patch": "sha256-nDFDlp2ujd74k9mEF0Bh7pZqBt+CUCF2bZHIaFgM25g="
-          },
-          "remote_patch_strip": 1
         }
       }
     },
@@ -2839,10 +2875,34 @@
         "bzlTransitiveDigest": "vOkppYc6wE/3x4HnEmuAd/USfcKbaNTBbUEl7bKmhsY=",
         "accumulatedFileDigests": {
           "@@rules_jvm_external~6.0//:rules_jvm_external_deps_install.json": "cafb5d2d8119391eb2b322ce3840d3352ea82d496bdb8cbd4b6779ec4d044dda",
-          "@@//:rules_jvm_external~~maven~maven_install.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          "@@//:rules_jvm_external~~maven~maven_install.json": "c914ea91ba07d56ac1cfe7808c68cece81329ac140b75e6d2e680068b2ea47fc"
         },
         "envVariables": {},
         "generatedRepoSpecs": {
+          "org_jetbrains_annotations_jar_sources_13_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_jetbrains_annotations_jar_sources_13_0",
+              "sha256": "42a5e144b8e81d50d6913d1007b695e62e614705268d8cf9f13dbdc478c2c68e",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/jetbrains/annotations/13.0/annotations-13.0-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/jetbrains/annotations/13.0/annotations-13.0-sources.jar"
+            }
+          },
+          "org_springframework_boot_spring_boot_starter_web_3_2_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_boot_spring_boot_starter_web_3_2_0",
+              "sha256": "a822294f646f14bdae888bd50081ed8f2f164c1e2338c50631df3955dedeaf3c",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-web/3.2.0/spring-boot-starter-web-3.2.0.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/boot/spring-boot-starter-web/3.2.0/spring-boot-starter-web-3.2.0.jar"
+            }
+          },
           "com_google_guava_guava_32_1_2_jre": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -2891,6 +2951,18 @@
               "downloaded_file_path": "v1/io/perfmark/perfmark-api/0.26.0/perfmark-api-0.26.0.jar"
             }
           },
+          "jakarta_annotation_jakarta_annotation_api_jar_sources_2_1_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~jakarta_annotation_jakarta_annotation_api_jar_sources_2_1_1",
+              "sha256": "4b8abc5d33e33ad0cc53588532dafece90135cc83629429534af1c0900747094",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1-sources.jar"
+              ],
+              "downloaded_file_path": "v1/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1-sources.jar"
+            }
+          },
           "software_amazon_awssdk_netty_nio_client_2_20_128": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -2901,6 +2973,18 @@
                 "https://repo1.maven.org/maven2/software/amazon/awssdk/netty-nio-client/2.20.128/netty-nio-client-2.20.128.jar"
               ],
               "downloaded_file_path": "v1/software/amazon/awssdk/netty-nio-client/2.20.128/netty-nio-client-2.20.128.jar"
+            }
+          },
+          "org_springframework_spring_web_jar_sources_6_1_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_spring_web_jar_sources_6_1_1",
+              "sha256": "6b1b3b9e7d304cb80663484c7ac8019b99acd96128814d310d424b184d8910b4",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-web/6.1.1/spring-web-6.1.1-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-web/6.1.1/spring-web-6.1.1-sources.jar"
             }
           },
           "software_amazon_awssdk_sdk_core_2_20_128": {
@@ -2939,6 +3023,18 @@
               "downloaded_file_path": "v1/software/amazon/awssdk/endpoints-spi/2.20.128/endpoints-spi-2.20.128.jar"
             }
           },
+          "ch_qos_logback_logback_core_1_4_11": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~ch_qos_logback_logback_core_1_4_11",
+              "sha256": "37ee7367bd24ca87ef77430119a1cb814a76b240afab5c17f802ea383f58aca1",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/ch/qos/logback/logback-core/1.4.11/logback-core-1.4.11.jar"
+              ],
+              "downloaded_file_path": "v1/ch/qos/logback/logback-core/1.4.11/logback-core-1.4.11.jar"
+            }
+          },
           "com_google_api_gax_grpc_2_32_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -2949,6 +3045,18 @@
                 "https://repo1.maven.org/maven2/com/google/api/gax-grpc/2.32.0/gax-grpc-2.32.0.jar"
               ],
               "downloaded_file_path": "v1/com/google/api/gax-grpc/2.32.0/gax-grpc-2.32.0.jar"
+            }
+          },
+          "org_jetbrains_kotlin_kotlin_reflect_jar_sources_1_9_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_jetbrains_kotlin_kotlin_reflect_jar_sources_1_9_0",
+              "sha256": "19d68b94196ea9df17a3fd5d0a1dfbe4c7e81c623fbcc49661289c0849b64a9c",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-reflect/1.9.0/kotlin-reflect-1.9.0-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/jetbrains/kotlin/kotlin-reflect/1.9.0/kotlin-reflect-1.9.0-sources.jar"
             }
           },
           "io_grpc_grpc_api_1_56_1": {
@@ -2999,6 +3107,18 @@
               "downloaded_file_path": "v1/software/amazon/awssdk/metrics-spi/2.20.128/metrics-spi-2.20.128.jar"
             }
           },
+          "org_springframework_spring_core_6_1_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_spring_core_6_1_1",
+              "sha256": "a2ef6992edc54d3380ba95c56d86d1baf64afb0eda9296518be21a483318d93f",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-core/6.1.1/spring-core-6.1.1.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-core/6.1.1/spring-core-6.1.1.jar"
+            }
+          },
           "org_apache_commons_commons_lang3_3_12_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3009,6 +3129,18 @@
                 "https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar"
               ],
               "downloaded_file_path": "v1/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar"
+            }
+          },
+          "org_apache_logging_log4j_log4j_api_jar_sources_2_21_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_apache_logging_log4j_log4j_api_jar_sources_2_21_1",
+              "sha256": "5d2875725938979d81788cd30234db9e82616ccc2607d9a5f64775824da842dd",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1-sources.jar"
             }
           },
           "io_netty_netty_codec_http_4_1_94_Final": {
@@ -3035,6 +3167,54 @@
               "downloaded_file_path": "v1/org/codehaus/mojo/animal-sniffer-annotations/1.23/animal-sniffer-annotations-1.23.jar"
             }
           },
+          "org_springframework_boot_spring_boot_jar_sources_3_2_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_boot_spring_boot_jar_sources_3_2_0",
+              "sha256": "6c4c10a56ba0d1d64abf5b10f38fa68359a76e114e607187861baeb10e2201aa",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot/3.2.0/spring-boot-3.2.0-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/boot/spring-boot/3.2.0/spring-boot-3.2.0-sources.jar"
+            }
+          },
+          "org_apache_tomcat_embed_tomcat_embed_core_10_1_16": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_apache_tomcat_embed_tomcat_embed_core_10_1_16",
+              "sha256": "0e10a073e143b338ddb3d57dfabb62169f61b3f3127733df8111a635b3fb799f",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-core/10.1.16/tomcat-embed-core-10.1.16.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/tomcat/embed/tomcat-embed-core/10.1.16/tomcat-embed-core-10.1.16.jar"
+            }
+          },
+          "org_apache_tomcat_embed_tomcat_embed_websocket_10_1_16": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_apache_tomcat_embed_tomcat_embed_websocket_10_1_16",
+              "sha256": "2ca8e769b76284b3c52fd8c7c15bb12cf2a1d4b9cc3309db525cdfec84dc9b3b",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.16/tomcat-embed-websocket-10.1.16.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.16/tomcat-embed-websocket-10.1.16.jar"
+            }
+          },
+          "org_springframework_spring_context_6_1_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_spring_context_6_1_1",
+              "sha256": "b46807c32546320560078dddd95f3b2e6a42b7a643830b323f45b0573bdbfaad",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-context/6.1.1/spring-context-6.1.1.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-context/6.1.1/spring-context-6.1.1.jar"
+            }
+          },
           "software_amazon_eventstream_eventstream_1_0_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3045,6 +3225,18 @@
                 "https://repo1.maven.org/maven2/software/amazon/eventstream/eventstream/1.0.1/eventstream-1.0.1.jar"
               ],
               "downloaded_file_path": "v1/software/amazon/eventstream/eventstream/1.0.1/eventstream-1.0.1.jar"
+            }
+          },
+          "com_fasterxml_jackson_core_jackson_core_2_15_3": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~com_fasterxml_jackson_core_jackson_core_2_15_3",
+              "sha256": "51fab7aad51ed588482edc507fd542747936c5094d1ab76ed21ddb63b96b610d",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar"
+              ],
+              "downloaded_file_path": "v1/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar"
             }
           },
           "com_fasterxml_jackson_core_jackson_core_2_15_2": {
@@ -3071,8 +3263,10 @@
               "artifacts": [
                 "{ \"group\": \"org.springframework.boot\", \"artifact\": \"spring-boot-starter\", \"version\": \"3.2.0\" }",
                 "{ \"group\": \"org.springframework.boot\", \"artifact\": \"spring-boot-starter-web\", \"version\": \"3.2.0\" }",
-                "{ \"group\": \"com.fasterxml.jackson.core\", \"artifact\": \"jackson-annotations\", \"version\": \"2.14.2\" }",
-                "{ \"group\": \"com.fasterxml.jackson.core\", \"artifact\": \"jackson-databind\", \"version\": \"2.14.2\" }"
+                "{ \"group\": \"com.fasterxml.jackson.core\", \"artifact\": \"jackson-annotations\", \"version\": \"2.18.2\" }",
+                "{ \"group\": \"com.fasterxml.jackson.core\", \"artifact\": \"jackson-databind\", \"version\": \"2.18.2\" }",
+                "{ \"group\": \"org.jetbrains.kotlin\", \"artifact\": \"kotlin-stdlib\", \"version\": \"1.9.0\" }",
+                "{ \"group\": \"org.jetbrains.kotlin\", \"artifact\": \"kotlin-reflect\", \"version\": \"1.9.0\" }"
               ],
               "fail_on_missing_checksum": true,
               "fetch_sources": true,
@@ -3117,6 +3311,30 @@
               "downloaded_file_path": "v1/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar"
             }
           },
+          "org_apache_logging_log4j_log4j_to_slf4j_2_21_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_apache_logging_log4j_log4j_to_slf4j_2_21_1",
+              "sha256": "de143c565ba78b0f2c0be58f132c7aec75e6e1a10845ebda5a4f17c2a35d9990",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar"
+            }
+          },
+          "org_slf4j_jul_to_slf4j_2_0_9": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_slf4j_jul_to_slf4j_2_0_9",
+              "sha256": "69b4e5f8d3bd3f6f54367d19f2c1ee95dd5877802f12d868282e218dd76b00bf",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/slf4j/jul-to-slf4j/2.0.9/jul-to-slf4j-2.0.9.jar"
+              ],
+              "downloaded_file_path": "v1/org/slf4j/jul-to-slf4j/2.0.9/jul-to-slf4j-2.0.9.jar"
+            }
+          },
           "com_google_api_grpc_proto_google_iam_v1_1_18_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3127,6 +3345,18 @@
                 "https://repo1.maven.org/maven2/com/google/api/grpc/proto-google-iam-v1/1.18.0/proto-google-iam-v1-1.18.0.jar"
               ],
               "downloaded_file_path": "v1/com/google/api/grpc/proto-google-iam-v1/1.18.0/proto-google-iam-v1-1.18.0.jar"
+            }
+          },
+          "ch_qos_logback_logback_classic_1_4_11": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~ch_qos_logback_logback_classic_1_4_11",
+              "sha256": "05850fca185dfa652969ed1e3864e365c0d724737a0f4ec68574baad1d855a0e",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/ch/qos/logback/logback-classic/1.4.11/logback-classic-1.4.11.jar"
+              ],
+              "downloaded_file_path": "v1/ch/qos/logback/logback-classic/1.4.11/logback-classic-1.4.11.jar"
             }
           },
           "com_google_http_client_google_http_client_gson_1_43_3": {
@@ -3141,6 +3371,18 @@
               "downloaded_file_path": "v1/com/google/http-client/google-http-client-gson/1.43.3/google-http-client-gson-1.43.3.jar"
             }
           },
+          "com_fasterxml_jackson_core_jackson_core_jar_sources_2_15_3": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~com_fasterxml_jackson_core_jackson_core_jar_sources_2_15_3",
+              "sha256": "31cb17527c55716c59fb0a10736b1b29306b4db0de8476e1ab6e54f85fe4ff55",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3-sources.jar"
+              ],
+              "downloaded_file_path": "v1/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3-sources.jar"
+            }
+          },
           "io_grpc_grpc_protobuf_1_56_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3151,6 +3393,42 @@
                 "https://repo1.maven.org/maven2/io/grpc/grpc-protobuf/1.56.1/grpc-protobuf-1.56.1.jar"
               ],
               "downloaded_file_path": "v1/io/grpc/grpc-protobuf/1.56.1/grpc-protobuf-1.56.1.jar"
+            }
+          },
+          "org_slf4j_jul_to_slf4j_jar_sources_2_0_9": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_slf4j_jul_to_slf4j_jar_sources_2_0_9",
+              "sha256": "33b2014c5ef4938e767f65e49202aa3d801fde82fba8051a7a7db94209dc8687",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/slf4j/jul-to-slf4j/2.0.9/jul-to-slf4j-2.0.9-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/slf4j/jul-to-slf4j/2.0.9/jul-to-slf4j-2.0.9-sources.jar"
+            }
+          },
+          "org_springframework_boot_spring_boot_starter_json_3_2_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_boot_spring_boot_starter_json_3_2_0",
+              "sha256": "fa8fd66d636a7b7a9aa1f4487ace4bb2261f620d50ac2410bef30f305cc8c958",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-json/3.2.0/spring-boot-starter-json-3.2.0.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/boot/spring-boot-starter-json/3.2.0/spring-boot-starter-json-3.2.0.jar"
+            }
+          },
+          "org_apache_tomcat_embed_tomcat_embed_websocket_jar_sources_10_1_16": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_apache_tomcat_embed_tomcat_embed_websocket_jar_sources_10_1_16",
+              "sha256": "5e1b1e9f540814760254c40441749d7a22c3bb1cebbfd871549c5523a363623d",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.16/tomcat-embed-websocket-10.1.16-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.16/tomcat-embed-websocket-10.1.16-sources.jar"
             }
           },
           "io_grpc_grpc_protobuf_lite_1_56_1": {
@@ -3243,6 +3521,30 @@
               "downloaded_file_path": "v1/com/google/api/grpc/proto-google-common-protos/2.23.0/proto-google-common-protos-2.23.0.jar"
             }
           },
+          "org_springframework_spring_core_jar_sources_6_1_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_spring_core_jar_sources_6_1_1",
+              "sha256": "c686793753f6d9bd26f46980cdcd120a0ef81a2486f385cb35f2ed853cea762c",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-core/6.1.1/spring-core-6.1.1-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-core/6.1.1/spring-core-6.1.1-sources.jar"
+            }
+          },
+          "org_springframework_boot_spring_boot_autoconfigure_jar_sources_3_2_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_boot_spring_boot_autoconfigure_jar_sources_3_2_0",
+              "sha256": "e4bb5b313ff4961c00cca1b80a6b7c62fefbf53a24822ec25b4064c8ed7fc8a9",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-autoconfigure/3.2.0/spring-boot-autoconfigure-3.2.0-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/boot/spring-boot-autoconfigure/3.2.0/spring-boot-autoconfigure-3.2.0-sources.jar"
+            }
+          },
           "io_grpc_grpc_netty_shaded_1_56_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3255,6 +3557,18 @@
               "downloaded_file_path": "v1/io/grpc/grpc-netty-shaded/1.56.1/grpc-netty-shaded-1.56.1.jar"
             }
           },
+          "org_springframework_boot_spring_boot_starter_tomcat_3_2_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_boot_spring_boot_starter_tomcat_3_2_0",
+              "sha256": "ff9ad38027481119a715f9e4344039de189c6f99259b6699df89e5413657b222",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-tomcat/3.2.0/spring-boot-starter-tomcat-3.2.0.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/boot/spring-boot-starter-tomcat/3.2.0/spring-boot-starter-tomcat-3.2.0.jar"
+            }
+          },
           "io_netty_netty_transport_4_1_94_Final": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3265,6 +3579,30 @@
                 "https://repo1.maven.org/maven2/io/netty/netty-transport/4.1.94.Final/netty-transport-4.1.94.Final.jar"
               ],
               "downloaded_file_path": "v1/io/netty/netty-transport/4.1.94.Final/netty-transport-4.1.94.Final.jar"
+            }
+          },
+          "org_springframework_boot_spring_boot_starter_json_jar_sources_3_2_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_boot_spring_boot_starter_json_jar_sources_3_2_0",
+              "sha256": "5be410a42f152d718aec79c3330737bb5efb89bb1a3f8b88b604b5efa9ebce7b",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-json/3.2.0/spring-boot-starter-json-3.2.0-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/boot/spring-boot-starter-json/3.2.0/spring-boot-starter-json-3.2.0-sources.jar"
+            }
+          },
+          "org_jetbrains_kotlin_kotlin_stdlib_jar_sources_1_9_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_jetbrains_kotlin_kotlin_stdlib_jar_sources_1_9_0",
+              "sha256": "4dad0d6fe62c142313e09e3b693c9dccc6bf9dc7a56a37c91be9edb7de0cf45b",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/1.9.0/kotlin-stdlib-1.9.0-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/jetbrains/kotlin/kotlin-stdlib/1.9.0/kotlin-stdlib-1.9.0-sources.jar"
             }
           },
           "io_netty_netty_common_4_1_94_Final": {
@@ -3352,6 +3690,30 @@
               "downloaded_file_path": "v1/software/amazon/awssdk/s3/2.20.128/s3-2.20.128.jar"
             }
           },
+          "com_fasterxml_jackson_datatype_jackson_datatype_jsr310_jar_sources_2_15_3": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~com_fasterxml_jackson_datatype_jackson_datatype_jsr310_jar_sources_2_15_3",
+              "sha256": "cc29cdc2d5261374f435a25402cc54d66717ec890b3944e184e0be2f296229bc",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.3/jackson-datatype-jsr310-2.15.3-sources.jar"
+              ],
+              "downloaded_file_path": "v1/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.3/jackson-datatype-jsr310-2.15.3-sources.jar"
+            }
+          },
+          "org_apache_tomcat_embed_tomcat_embed_el_jar_sources_10_1_16": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_apache_tomcat_embed_tomcat_embed_el_jar_sources_10_1_16",
+              "sha256": "36670f8d30cec1ea0cc5ac46ffab0dbe19ac8164a92b17feb531f2a9c1638b2c",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-el/10.1.16/tomcat-embed-el-10.1.16-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/tomcat/embed/tomcat-embed-el/10.1.16/tomcat-embed-el-10.1.16-sources.jar"
+            }
+          },
           "io_netty_netty_codec_http2_4_1_94_Final": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3412,6 +3774,30 @@
               "downloaded_file_path": "v1/com/google/protobuf/protobuf-java-util/3.23.2/protobuf-java-util-3.23.2.jar"
             }
           },
+          "org_apache_tomcat_embed_tomcat_embed_el_10_1_16": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_apache_tomcat_embed_tomcat_embed_el_10_1_16",
+              "sha256": "4b00097753037c7e4fb8217d6bb951db022a6c9a45af11d7bb087ed17f8d21d2",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-el/10.1.16/tomcat-embed-el-10.1.16.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/tomcat/embed/tomcat-embed-el/10.1.16/tomcat-embed-el-10.1.16.jar"
+            }
+          },
+          "org_springframework_boot_spring_boot_starter_logging_3_2_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_boot_spring_boot_starter_logging_3_2_0",
+              "sha256": "3bce47ba84854cd6d37d91eadedae2d40a43c5c5069cc19ab9ca11d7ecc2e65d",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-logging/3.2.0/spring-boot-starter-logging-3.2.0.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/boot/spring-boot-starter-logging/3.2.0/spring-boot-starter-logging-3.2.0.jar"
+            }
+          },
           "software_amazon_awssdk_apache_client_2_20_128": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3448,6 +3834,66 @@
               "downloaded_file_path": "v1/software/amazon/awssdk/third-party-jackson-core/2.20.128/third-party-jackson-core-2.20.128.jar"
             }
           },
+          "org_springframework_spring_web_6_1_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_spring_web_6_1_1",
+              "sha256": "9aead203936fc3508217ca833b58c2ce65d8b8162133dfea5f3e03cbf8be3d26",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-web/6.1.1/spring-web-6.1.1.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-web/6.1.1/spring-web-6.1.1.jar"
+            }
+          },
+          "io_micrometer_micrometer_observation_1_12_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~io_micrometer_micrometer_observation_1_12_0",
+              "sha256": "3f160a849da81d2520bbdfe1d6976d1f72568256479576a16bf95babb6520085",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.12.0/micrometer-observation-1.12.0.jar"
+              ],
+              "downloaded_file_path": "v1/io/micrometer/micrometer-observation/1.12.0/micrometer-observation-1.12.0.jar"
+            }
+          },
+          "org_springframework_boot_spring_boot_starter_jar_sources_3_2_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_boot_spring_boot_starter_jar_sources_3_2_0",
+              "sha256": "bcdd366ca55fea892dd86048ed82d728e8d15270f038a5e6c3e29d60f213d7c6",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter/3.2.0/spring-boot-starter-3.2.0-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/boot/spring-boot-starter/3.2.0/spring-boot-starter-3.2.0-sources.jar"
+            }
+          },
+          "org_jetbrains_kotlin_kotlin_reflect_1_9_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_jetbrains_kotlin_kotlin_reflect_1_9_0",
+              "sha256": "2070159be514ea8ea3ce2c8b1ee7993e6ff60a93565a299f200629aa7df7f581",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-reflect/1.9.0/kotlin-reflect-1.9.0.jar"
+              ],
+              "downloaded_file_path": "v1/org/jetbrains/kotlin/kotlin-reflect/1.9.0/kotlin-reflect-1.9.0.jar"
+            }
+          },
+          "org_springframework_boot_spring_boot_3_2_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_boot_spring_boot_3_2_0",
+              "sha256": "768ce558b6a998d203666d9647ed60a5ec8a6e0cd4598a6a7f6bdf226ff5e5d6",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot/3.2.0/spring-boot-3.2.0.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/boot/spring-boot/3.2.0/spring-boot-3.2.0.jar"
+            }
+          },
           "com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3470,6 +3916,18 @@
                 "https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar"
               ],
               "downloaded_file_path": "v1/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar"
+            }
+          },
+          "io_micrometer_micrometer_observation_jar_sources_1_12_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~io_micrometer_micrometer_observation_jar_sources_1_12_0",
+              "sha256": "5a832c600f8088372c2ced528319af5f494217483a5b8e3f4a3f5e18657b3422",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-observation/1.12.0/micrometer-observation-1.12.0-sources.jar"
+              ],
+              "downloaded_file_path": "v1/io/micrometer/micrometer-observation/1.12.0/micrometer-observation-1.12.0-sources.jar"
             }
           },
           "com_google_api_api_common_2_15_0": {
@@ -3532,6 +3990,18 @@
               "downloaded_file_path": "v1/io/grpc/grpc-services/1.56.1/grpc-services-1.56.1.jar"
             }
           },
+          "org_jetbrains_kotlin_kotlin_stdlib_common_1_9_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_jetbrains_kotlin_kotlin_stdlib_common_1_9_0",
+              "sha256": "283274204bd7c020789ec46f8f8e72af4244d7f550b3392a57e5ca006ad7aa2c",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-common/1.9.0/kotlin-stdlib-common-1.9.0.jar"
+              ],
+              "downloaded_file_path": "v1/org/jetbrains/kotlin/kotlin-stdlib-common/1.9.0/kotlin-stdlib-common-1.9.0.jar"
+            }
+          },
           "software_amazon_awssdk_regions_2_20_128": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3542,6 +4012,18 @@
                 "https://repo1.maven.org/maven2/software/amazon/awssdk/regions/2.20.128/regions-2.20.128.jar"
               ],
               "downloaded_file_path": "v1/software/amazon/awssdk/regions/2.20.128/regions-2.20.128.jar"
+            }
+          },
+          "org_springframework_boot_spring_boot_starter_3_2_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_boot_spring_boot_starter_3_2_0",
+              "sha256": "18b46cf89609455b34ecd13d95ac8d0cccf88d4d7935249ae4a6f79c6deb43e6",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter/3.2.0/spring-boot-starter-3.2.0.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/boot/spring-boot-starter/3.2.0/spring-boot-starter-3.2.0.jar"
             }
           },
           "com_google_api_grpc_grpc_google_cloud_storage_v2_2_26_1_alpha": {
@@ -3616,6 +4098,18 @@
               "downloaded_file_path": "v1/io/netty/netty-handler/4.1.94.Final/netty-handler-4.1.94.Final.jar"
             }
           },
+          "org_apache_logging_log4j_log4j_api_2_21_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_apache_logging_log4j_log4j_api_2_21_1",
+              "sha256": "1db48e180881bef1deb502022006a025a248d8f6a26186789b0c7ce487c602d6",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar"
+            }
+          },
           "io_netty_netty_resolver_4_1_94_Final": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3626,6 +4120,18 @@
                 "https://repo1.maven.org/maven2/io/netty/netty-resolver/4.1.94.Final/netty-resolver-4.1.94.Final.jar"
               ],
               "downloaded_file_path": "v1/io/netty/netty-resolver/4.1.94.Final/netty-resolver-4.1.94.Final.jar"
+            }
+          },
+          "com_fasterxml_jackson_core_jackson_annotations_2_15_3": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~com_fasterxml_jackson_core_jackson_annotations_2_15_3",
+              "sha256": "aae865c3d88256d61b11523cb1e88bd48d5b9ad5855fa1fc859504fd2204708a",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar"
+              ],
+              "downloaded_file_path": "v1/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar"
             }
           },
           "com_google_http_client_google_http_client_1_43_3": {
@@ -3676,6 +4182,18 @@
               "downloaded_file_path": "v1/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar"
             }
           },
+          "org_jetbrains_annotations_13_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_jetbrains_annotations_13_0",
+              "sha256": "ace2a10dc8e2d5fd34925ecac03e4988b2c0f851650c94b8cef49ba1bd111478",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/jetbrains/annotations/13.0/annotations-13.0.jar"
+              ],
+              "downloaded_file_path": "v1/org/jetbrains/annotations/13.0/annotations-13.0.jar"
+            }
+          },
           "commons_logging_commons_logging_1_2": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3686,6 +4204,18 @@
                 "https://repo1.maven.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2.jar"
               ],
               "downloaded_file_path": "v1/commons-logging/commons-logging/1.2/commons-logging-1.2.jar"
+            }
+          },
+          "com_fasterxml_jackson_core_jackson_databind_2_15_3": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~com_fasterxml_jackson_core_jackson_databind_2_15_3",
+              "sha256": "c3c53333a2172a80678bda1803e39cff45bec6ae3e9c7d4f44a81ec4e2ab18dc",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar"
+              ],
+              "downloaded_file_path": "v1/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar"
             }
           },
           "com_google_re2j_re2j_1_7": {
@@ -3748,6 +4278,42 @@
               "downloaded_file_path": "v1/org/conscrypt/conscrypt-openjdk-uber/2.5.2/conscrypt-openjdk-uber-2.5.2.jar"
             }
           },
+          "com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_15_3": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_15_3",
+              "sha256": "bea1d78009ebc4e5d54918a3f7aec5da9fbd09f662c191a217ffcf37e8527c5e",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.3/jackson-datatype-jsr310-2.15.3.jar"
+              ],
+              "downloaded_file_path": "v1/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.3/jackson-datatype-jsr310-2.15.3.jar"
+            }
+          },
+          "org_springframework_boot_spring_boot_starter_logging_jar_sources_3_2_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_boot_spring_boot_starter_logging_jar_sources_3_2_0",
+              "sha256": "c69f4a189435b5783d9bc8139bab3d6a6f4bff6a7d52ca172865a158fe08054c",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-logging/3.2.0/spring-boot-starter-logging-3.2.0-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/boot/spring-boot-starter-logging/3.2.0/spring-boot-starter-logging-3.2.0-sources.jar"
+            }
+          },
+          "org_springframework_spring_webmvc_jar_sources_6_1_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_spring_webmvc_jar_sources_6_1_1",
+              "sha256": "ba82443c057fca93a2cf2593f5ddd8903407235ab936ce8965236387ca2dcb3a",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/6.1.1/spring-webmvc-6.1.1-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-webmvc/6.1.1/spring-webmvc-6.1.1-sources.jar"
+            }
+          },
           "com_google_auto_value_auto_value_annotations_1_10_2": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3772,6 +4338,18 @@
               "downloaded_file_path": "v1/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar"
             }
           },
+          "io_micrometer_micrometer_commons_jar_sources_1_12_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~io_micrometer_micrometer_commons_jar_sources_1_12_0",
+              "sha256": "da288ec1aa54f179e8f9aae2b75b167c97992ba682ab335476b2e2419be282aa",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.12.0/micrometer-commons-1.12.0-sources.jar"
+              ],
+              "downloaded_file_path": "v1/io/micrometer/micrometer-commons/1.12.0/micrometer-commons-1.12.0-sources.jar"
+            }
+          },
           "com_google_http_client_google_http_client_apache_v2_1_43_3": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3794,6 +4372,30 @@
                 "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.23.2/protobuf-java-3.23.2.jar"
               ],
               "downloaded_file_path": "v1/com/google/protobuf/protobuf-java/3.23.2/protobuf-java-3.23.2.jar"
+            }
+          },
+          "org_springframework_spring_context_jar_sources_6_1_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_spring_context_jar_sources_6_1_1",
+              "sha256": "4e87f6432f4b7b872c8ac0f42921d638691f53cb97f0954d38db282d5ab59fbe",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-context/6.1.1/spring-context-6.1.1-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-context/6.1.1/spring-context-6.1.1-sources.jar"
+            }
+          },
+          "org_springframework_spring_aop_6_1_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_spring_aop_6_1_1",
+              "sha256": "a3d5a8e7f7f1dc231c25d1d80669b67c3a306294bc9e36cdd002453e76a481b1",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-aop/6.1.1/spring-aop-6.1.1.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-aop/6.1.1/spring-aop-6.1.1.jar"
             }
           },
           "com_google_api_client_google_api_client_2_2_0": {
@@ -3882,6 +4484,18 @@
               "downloaded_file_path": "v1/com/google/http-client/google-http-client-appengine/1.43.3/google-http-client-appengine-1.43.3.jar"
             }
           },
+          "jakarta_annotation_jakarta_annotation_api_2_1_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~jakarta_annotation_jakarta_annotation_api_2_1_1",
+              "sha256": "5f65fdaf424eee2b55e1d882ba9bb376be93fb09b37b808be6e22e8851c909fe",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar"
+              ],
+              "downloaded_file_path": "v1/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar"
+            }
+          },
           "io_grpc_grpc_auth_1_56_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3956,6 +4570,42 @@
               "downloaded_file_path": "v1/software/amazon/awssdk/aws-query-protocol/2.20.128/aws-query-protocol-2.20.128.jar"
             }
           },
+          "com_fasterxml_jackson_core_jackson_annotations_jar_sources_2_15_3": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~com_fasterxml_jackson_core_jackson_annotations_jar_sources_2_15_3",
+              "sha256": "9b3f2b6791a3e775cec9b9be575add9406b8423d8b49662b78c1017f22952528",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3-sources.jar"
+              ],
+              "downloaded_file_path": "v1/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3-sources.jar"
+            }
+          },
+          "org_springframework_spring_jcl_jar_sources_6_1_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_spring_jcl_jar_sources_6_1_1",
+              "sha256": "cbe7998f0eb64feebb41c3ae3fd39516304b20968549b30727d8f15af71002f4",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-jcl/6.1.1/spring-jcl-6.1.1-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-jcl/6.1.1/spring-jcl-6.1.1-sources.jar"
+            }
+          },
+          "org_apache_logging_log4j_log4j_to_slf4j_jar_sources_2_21_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_apache_logging_log4j_log4j_to_slf4j_jar_sources_2_21_1",
+              "sha256": "dbe95b592f6485960f5678cfd17d511b7fb53416d256d00266ee4508f81b14db",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1-sources.jar"
+            }
+          },
           "com_google_http_client_google_http_client_jackson2_1_43_3": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -4004,8 +4654,10 @@
               "artifacts": [
                 "{ \"group\": \"org.springframework.boot\", \"artifact\": \"spring-boot-starter\", \"version\": \"3.2.0\" }",
                 "{ \"group\": \"org.springframework.boot\", \"artifact\": \"spring-boot-starter-web\", \"version\": \"3.2.0\" }",
-                "{ \"group\": \"com.fasterxml.jackson.core\", \"artifact\": \"jackson-annotations\", \"version\": \"2.14.2\" }",
-                "{ \"group\": \"com.fasterxml.jackson.core\", \"artifact\": \"jackson-databind\", \"version\": \"2.14.2\" }"
+                "{ \"group\": \"com.fasterxml.jackson.core\", \"artifact\": \"jackson-annotations\", \"version\": \"2.18.2\" }",
+                "{ \"group\": \"com.fasterxml.jackson.core\", \"artifact\": \"jackson-databind\", \"version\": \"2.18.2\" }",
+                "{ \"group\": \"org.jetbrains.kotlin\", \"artifact\": \"kotlin-stdlib\", \"version\": \"1.9.0\" }",
+                "{ \"group\": \"org.jetbrains.kotlin\", \"artifact\": \"kotlin-reflect\", \"version\": \"1.9.0\" }"
               ],
               "fetch_sources": true,
               "fetch_javadoc": false,
@@ -4017,12 +4669,24 @@
                 "@@//visibility:private"
               ],
               "additional_netrc_lines": [],
-              "fail_if_repin_required": false,
+              "fail_if_repin_required": true,
               "use_starlark_android_rules": false,
               "aar_import_bzl_label": "@build_bazel_rules_android//android:rules.bzl",
               "duplicate_version_warning": "warn",
               "excluded_artifacts": [],
               "repin_instructions": ""
+            }
+          },
+          "com_fasterxml_jackson_module_jackson_module_parameter_names_2_15_3": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~com_fasterxml_jackson_module_jackson_module_parameter_names_2_15_3",
+              "sha256": "baf1a3156a23cb407e05374161a07ed8560f78a7ae249955de04a9a2fa2d0f2b",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3.jar"
+              ],
+              "downloaded_file_path": "v1/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3.jar"
             }
           },
           "com_google_api_grpc_proto_google_cloud_storage_v2_2_26_1_alpha": {
@@ -4037,6 +4701,18 @@
               "downloaded_file_path": "v1/com/google/api/grpc/proto-google-cloud-storage-v2/2.26.1-alpha/proto-google-cloud-storage-v2-2.26.1-alpha.jar"
             }
           },
+          "com_fasterxml_jackson_datatype_jackson_datatype_jdk8_jar_sources_2_15_3": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~com_fasterxml_jackson_datatype_jackson_datatype_jdk8_jar_sources_2_15_3",
+              "sha256": "55bd812e461fbcdfae92fbcdacb38afee85669b26ed67ac95edd922cce098d70",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.3/jackson-datatype-jdk8-2.15.3-sources.jar"
+              ],
+              "downloaded_file_path": "v1/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.3/jackson-datatype-jdk8-2.15.3-sources.jar"
+            }
+          },
           "org_checkerframework_checker_qual_3_33_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -4047,6 +4723,30 @@
                 "https://repo1.maven.org/maven2/org/checkerframework/checker-qual/3.33.0/checker-qual-3.33.0.jar"
               ],
               "downloaded_file_path": "v1/org/checkerframework/checker-qual/3.33.0/checker-qual-3.33.0.jar"
+            }
+          },
+          "org_yaml_snakeyaml_2_2": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_yaml_snakeyaml_2_2",
+              "sha256": "1467931448a0817696ae2805b7b8b20bfb082652bf9c4efaed528930dc49389b",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar"
+              ],
+              "downloaded_file_path": "v1/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar"
+            }
+          },
+          "com_fasterxml_jackson_module_jackson_module_parameter_names_jar_sources_2_15_3": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~com_fasterxml_jackson_module_jackson_module_parameter_names_jar_sources_2_15_3",
+              "sha256": "9c63d4b5ec109ce694fccef4ef5d1d3db57fc5bfc224b31d042c8938cdba58c4",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3-sources.jar"
+              ],
+              "downloaded_file_path": "v1/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3-sources.jar"
             }
           },
           "unpinned_rules_jvm_external_deps": {
@@ -4112,6 +4812,18 @@
               "downloaded_file_path": "v1/io/grpc/grpc-rls/1.56.1/grpc-rls-1.56.1.jar"
             }
           },
+          "org_springframework_boot_spring_boot_starter_web_jar_sources_3_2_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_boot_spring_boot_starter_web_jar_sources_3_2_0",
+              "sha256": "f86a948c99ad8a8d60a034a1759bd9390bc2520729aabe4f54bd9c70d6a48433",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-web/3.2.0/spring-boot-starter-web-3.2.0-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/boot/spring-boot-starter-web/3.2.0/spring-boot-starter-web-3.2.0-sources.jar"
+            }
+          },
           "io_netty_netty_transport_classes_epoll_4_1_94_Final": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -4148,6 +4860,30 @@
               "downloaded_file_path": "v1/io/opencensus/opencensus-contrib-http-util/0.31.1/opencensus-contrib-http-util-0.31.1.jar"
             }
           },
+          "org_apache_tomcat_embed_tomcat_embed_core_jar_sources_10_1_16": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_apache_tomcat_embed_tomcat_embed_core_jar_sources_10_1_16",
+              "sha256": "13d72618d099bd2af61bdb7a2669b663bca4136f75d1169e6f54e8f16b444851",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/apache/tomcat/embed/tomcat-embed-core/10.1.16/tomcat-embed-core-10.1.16-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/tomcat/embed/tomcat-embed-core/10.1.16/tomcat-embed-core-10.1.16-sources.jar"
+            }
+          },
+          "io_micrometer_micrometer_commons_1_12_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~io_micrometer_micrometer_commons_1_12_0",
+              "sha256": "f4b8ecae3c8ef40fd9b9da82582aada1cf764b8bb93f4a2a2126575e3f67de47",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/io/micrometer/micrometer-commons/1.12.0/micrometer-commons-1.12.0.jar"
+              ],
+              "downloaded_file_path": "v1/io/micrometer/micrometer-commons/1.12.0/micrometer-commons-1.12.0.jar"
+            }
+          },
           "com_google_auth_google_auth_library_oauth2_http_1_19_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -4158,6 +4894,54 @@
                 "https://repo1.maven.org/maven2/com/google/auth/google-auth-library-oauth2-http/1.19.0/google-auth-library-oauth2-http-1.19.0.jar"
               ],
               "downloaded_file_path": "v1/com/google/auth/google-auth-library-oauth2-http/1.19.0/google-auth-library-oauth2-http-1.19.0.jar"
+            }
+          },
+          "org_springframework_boot_spring_boot_autoconfigure_3_2_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_boot_spring_boot_autoconfigure_3_2_0",
+              "sha256": "c317b3c218da4fa2f1715e06a5c22432f508cfd64dff0d83946c39092e6848a6",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-autoconfigure/3.2.0/spring-boot-autoconfigure-3.2.0.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/boot/spring-boot-autoconfigure/3.2.0/spring-boot-autoconfigure-3.2.0.jar"
+            }
+          },
+          "org_springframework_spring_expression_jar_sources_6_1_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_spring_expression_jar_sources_6_1_1",
+              "sha256": "78d0561a089a65b69afd68046753fdc649b846bd4ab54b9731fe49b1c30cf8be",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-expression/6.1.1/spring-expression-6.1.1-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-expression/6.1.1/spring-expression-6.1.1-sources.jar"
+            }
+          },
+          "org_springframework_spring_aop_jar_sources_6_1_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_spring_aop_jar_sources_6_1_1",
+              "sha256": "a1c9ba336630e66e110f0b5607f100e2ec77a0f7e3503ef2e8acddabf5f93633",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-aop/6.1.1/spring-aop-6.1.1-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-aop/6.1.1/spring-aop-6.1.1-sources.jar"
+            }
+          },
+          "org_slf4j_slf4j_api_2_0_9": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_slf4j_slf4j_api_2_0_9",
+              "sha256": "0818930dc8d7debb403204611691da58e49d42c50b6ffcfdce02dadb7c3c2b6c",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar"
+              ],
+              "downloaded_file_path": "v1/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar"
             }
           },
           "com_google_cloud_google_cloud_core_http_2_22_0": {
@@ -4184,6 +4968,30 @@
               "downloaded_file_path": "v1/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar"
             }
           },
+          "org_springframework_spring_webmvc_6_1_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_spring_webmvc_6_1_1",
+              "sha256": "2474c7b3ee933268afaa06220e07166bac3cc8a9303845df9aec8526a29850c8",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-webmvc/6.1.1/spring-webmvc-6.1.1.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-webmvc/6.1.1/spring-webmvc-6.1.1.jar"
+            }
+          },
+          "org_springframework_spring_beans_6_1_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_spring_beans_6_1_1",
+              "sha256": "2bca4b8cdeeb81121db76cc423e4d952e251f708e9abc319c8e3f38511c43b86",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-beans/6.1.1/spring-beans-6.1.1.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-beans/6.1.1/spring-beans-6.1.1.jar"
+            }
+          },
           "com_google_auth_google_auth_library_credentials_1_19_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -4194,6 +5002,42 @@
                 "https://repo1.maven.org/maven2/com/google/auth/google-auth-library-credentials/1.19.0/google-auth-library-credentials-1.19.0.jar"
               ],
               "downloaded_file_path": "v1/com/google/auth/google-auth-library-credentials/1.19.0/google-auth-library-credentials-1.19.0.jar"
+            }
+          },
+          "com_fasterxml_jackson_core_jackson_databind_jar_sources_2_15_3": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~com_fasterxml_jackson_core_jackson_databind_jar_sources_2_15_3",
+              "sha256": "d692cdf070e03c11e95306da08ecdf312aac559f158019a5bfcdc6e0798d5456",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3-sources.jar"
+              ],
+              "downloaded_file_path": "v1/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3-sources.jar"
+            }
+          },
+          "org_jetbrains_kotlin_kotlin_stdlib_common_jar_sources_1_9_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_jetbrains_kotlin_kotlin_stdlib_common_jar_sources_1_9_0",
+              "sha256": "5e53b9f51abe8b2492d389e463c1f4ac6dbf6028e2422139a21a7327128b2a63",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib-common/1.9.0/kotlin-stdlib-common-1.9.0-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/jetbrains/kotlin/kotlin-stdlib-common/1.9.0/kotlin-stdlib-common-1.9.0-sources.jar"
+            }
+          },
+          "org_springframework_boot_spring_boot_starter_tomcat_jar_sources_3_2_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_boot_spring_boot_starter_tomcat_jar_sources_3_2_0",
+              "sha256": "aa38e05107b3060d2fce00537d445a981f2fe0f5552b1389ee430d6f1f657226",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-tomcat/3.2.0/spring-boot-starter-tomcat-3.2.0-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/boot/spring-boot-starter-tomcat/3.2.0/spring-boot-starter-tomcat-3.2.0-sources.jar"
             }
           },
           "io_grpc_grpc_xds_1_56_1": {
@@ -4208,6 +5052,30 @@
               "downloaded_file_path": "v1/io/grpc/grpc-xds/1.56.1/grpc-xds-1.56.1.jar"
             }
           },
+          "org_springframework_spring_jcl_6_1_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_spring_jcl_6_1_1",
+              "sha256": "df17daa5812222a83795065dcc920a494dad423171265f8fa392628961c92317",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-jcl/6.1.1/spring-jcl-6.1.1.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-jcl/6.1.1/spring-jcl-6.1.1.jar"
+            }
+          },
+          "org_yaml_snakeyaml_jar_sources_2_2": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_yaml_snakeyaml_jar_sources_2_2",
+              "sha256": "8f7cf911cf63db55fd980a926d155bd846317737351a2f48ef1c1088c414538a",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/yaml/snakeyaml/2.2/snakeyaml-2.2-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/yaml/snakeyaml/2.2/snakeyaml-2.2-sources.jar"
+            }
+          },
           "com_google_code_findbugs_jsr305_3_0_2": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -4218,6 +5086,18 @@
                 "https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar"
               ],
               "downloaded_file_path": "v1/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar"
+            }
+          },
+          "ch_qos_logback_logback_core_jar_sources_1_4_11": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~ch_qos_logback_logback_core_jar_sources_1_4_11",
+              "sha256": "b989ca5d6268b71af43f25effe6224d2816d974dc8d797c69e2937f431d402b6",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/ch/qos/logback/logback-core/1.4.11/logback-core-1.4.11-sources.jar"
+              ],
+              "downloaded_file_path": "v1/ch/qos/logback/logback-core/1.4.11/logback-core-1.4.11-sources.jar"
             }
           },
           "com_google_android_annotations_4_1_1_4": {
@@ -4256,6 +5136,18 @@
               "downloaded_file_path": "v1/software/amazon/awssdk/aws-core/2.20.128/aws-core-2.20.128.jar"
             }
           },
+          "org_jetbrains_kotlin_kotlin_stdlib_1_9_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_jetbrains_kotlin_kotlin_stdlib_1_9_0",
+              "sha256": "35aeffbe2db5aa446072cee50fcee48b7fa9e2fc51ca37c0cc7d7d0bc39d952e",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-stdlib/1.9.0/kotlin-stdlib-1.9.0.jar"
+              ],
+              "downloaded_file_path": "v1/org/jetbrains/kotlin/kotlin-stdlib/1.9.0/kotlin-stdlib-1.9.0.jar"
+            }
+          },
           "com_google_apis_google_api_services_storage_v1_rev20230617_2_0_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -4268,6 +5160,30 @@
               "downloaded_file_path": "v1/com/google/apis/google-api-services-storage/v1-rev20230617-2.0.0/google-api-services-storage-v1-rev20230617-2.0.0.jar"
             }
           },
+          "org_springframework_spring_beans_jar_sources_6_1_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_spring_beans_jar_sources_6_1_1",
+              "sha256": "de906a87bf3bac04b845d7e49058cf6d54e2119ae031254582afa4aaf1be2636",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-beans/6.1.1/spring-beans-6.1.1-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-beans/6.1.1/spring-beans-6.1.1-sources.jar"
+            }
+          },
+          "org_springframework_spring_expression_6_1_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_springframework_spring_expression_6_1_1",
+              "sha256": "a787dc92f1f9959069f5be206d5adbd6c1efb2444d458d279f02eda6b0e6b26f",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/springframework/spring-expression/6.1.1/spring-expression-6.1.1.jar"
+              ],
+              "downloaded_file_path": "v1/org/springframework/spring-expression/6.1.1/spring-expression-6.1.1.jar"
+            }
+          },
           "software_amazon_awssdk_annotations_2_20_128": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -4278,6 +5194,42 @@
                 "https://repo1.maven.org/maven2/software/amazon/awssdk/annotations/2.20.128/annotations-2.20.128.jar"
               ],
               "downloaded_file_path": "v1/software/amazon/awssdk/annotations/2.20.128/annotations-2.20.128.jar"
+            }
+          },
+          "ch_qos_logback_logback_classic_jar_sources_1_4_11": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~ch_qos_logback_logback_classic_jar_sources_1_4_11",
+              "sha256": "ba0cda77e52ae700a89373de9e6cbdb4b95d7cf3cd7dd641c80270ca0464d788",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/ch/qos/logback/logback-classic/1.4.11/logback-classic-1.4.11-sources.jar"
+              ],
+              "downloaded_file_path": "v1/ch/qos/logback/logback-classic/1.4.11/logback-classic-1.4.11-sources.jar"
+            }
+          },
+          "org_slf4j_slf4j_api_jar_sources_2_0_9": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~org_slf4j_slf4j_api_jar_sources_2_0_9",
+              "sha256": "0d83bc49452416dd121ee41cebf41cdc64b69e7f7fdc97c2762ec406336c7ad3",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9-sources.jar"
+            }
+          },
+          "com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_15_3": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "name": "rules_jvm_external~6.0~maven~com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_15_3",
+              "sha256": "29995d3677f72dde74bf32bbf268b96beb952492b742d93f4c70af6c44b2156e",
+              "urls": [
+                "https://repo.maven.apache.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.3/jackson-datatype-jdk8-2.15.3.jar"
+              ],
+              "downloaded_file_path": "v1/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.3/jackson-datatype-jdk8-2.15.3.jar"
             }
           },
           "io_netty_netty_transport_native_unix_common_4_1_94_Final": {
