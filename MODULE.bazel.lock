@@ -1,6 +1,6 @@
 {
   "lockFileVersion": 3,
-  "moduleFileHash": "f82138d9f7a5c9b923dffa78fcaababef61732fec9a86644717f6fecbdaa0ea6",
+  "moduleFileHash": "5f9046332319f953eb9b456aa29b96b1c633e15041984431dea2d4a80ec00df1",
   "flags": {
     "cmdRegistries": [
       "https://bcr.bazel.build/"
@@ -77,8 +77,8 @@
                 "artifacts": [
                   "org.springframework.boot:spring-boot-starter:3.2.0",
                   "org.springframework.boot:spring-boot-starter-web:3.2.0",
-                  "com.fasterxml.jackson.core:jackson-annotations:2.14.2",
-                  "com.fasterxml.jackson.core:jackson-databind:2.14.2",
+                  "com.fasterxml.jackson.core:jackson-annotations:2.18.2",
+                  "com.fasterxml.jackson.core:jackson-databind:2.18.2",
                   "org.jetbrains.kotlin:kotlin-stdlib:1.9.0",
                   "org.jetbrains.kotlin:kotlin-reflect:1.9.0"
                 ],
@@ -3263,8 +3263,8 @@
               "artifacts": [
                 "{ \"group\": \"org.springframework.boot\", \"artifact\": \"spring-boot-starter\", \"version\": \"3.2.0\" }",
                 "{ \"group\": \"org.springframework.boot\", \"artifact\": \"spring-boot-starter-web\", \"version\": \"3.2.0\" }",
-                "{ \"group\": \"com.fasterxml.jackson.core\", \"artifact\": \"jackson-annotations\", \"version\": \"2.14.2\" }",
-                "{ \"group\": \"com.fasterxml.jackson.core\", \"artifact\": \"jackson-databind\", \"version\": \"2.14.2\" }",
+                "{ \"group\": \"com.fasterxml.jackson.core\", \"artifact\": \"jackson-annotations\", \"version\": \"2.18.2\" }",
+                "{ \"group\": \"com.fasterxml.jackson.core\", \"artifact\": \"jackson-databind\", \"version\": \"2.18.2\" }",
                 "{ \"group\": \"org.jetbrains.kotlin\", \"artifact\": \"kotlin-stdlib\", \"version\": \"1.9.0\" }",
                 "{ \"group\": \"org.jetbrains.kotlin\", \"artifact\": \"kotlin-reflect\", \"version\": \"1.9.0\" }"
               ],
@@ -4654,8 +4654,8 @@
               "artifacts": [
                 "{ \"group\": \"org.springframework.boot\", \"artifact\": \"spring-boot-starter\", \"version\": \"3.2.0\" }",
                 "{ \"group\": \"org.springframework.boot\", \"artifact\": \"spring-boot-starter-web\", \"version\": \"3.2.0\" }",
-                "{ \"group\": \"com.fasterxml.jackson.core\", \"artifact\": \"jackson-annotations\", \"version\": \"2.14.2\" }",
-                "{ \"group\": \"com.fasterxml.jackson.core\", \"artifact\": \"jackson-databind\", \"version\": \"2.14.2\" }",
+                "{ \"group\": \"com.fasterxml.jackson.core\", \"artifact\": \"jackson-annotations\", \"version\": \"2.18.2\" }",
+                "{ \"group\": \"com.fasterxml.jackson.core\", \"artifact\": \"jackson-databind\", \"version\": \"2.18.2\" }",
                 "{ \"group\": \"org.jetbrains.kotlin\", \"artifact\": \"kotlin-stdlib\", \"version\": \"1.9.0\" }",
                 "{ \"group\": \"org.jetbrains.kotlin\", \"artifact\": \"kotlin-reflect\", \"version\": \"1.9.0\" }"
               ],

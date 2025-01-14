@@ -33,8 +33,6 @@ maven.install(
         "org.springframework.boot:spring-boot-starter-web:%s" % SPRING_BOOT_VERSION,
         "com.fasterxml.jackson.core:jackson-annotations:2.18.2",
         "com.fasterxml.jackson.core:jackson-databind:2.18.2",
-        "com.fasterxml.jackson.core:jackson-annotations:2.14.2",
-        "com.fasterxml.jackson.core:jackson-databind:2.14.2",
         # Kotlin dependencies
         "org.jetbrains.kotlin:kotlin-stdlib:%s" % KOTLIN_VERSION,
         "org.jetbrains.kotlin:kotlin-reflect:%s" % KOTLIN_VERSION,
