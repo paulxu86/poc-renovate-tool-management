@@ -9,17 +9,33 @@ bazel_dep(name = "rules_jvm_external", version = "6.0")
 bazel_dep(name = "rules_oci", version = "1.7.2")
 bazel_dep(name = "rules_pkg", version = "0.9.1")
 bazel_dep(name = "aspect_bazel_lib", version = "2.7.2")
+bazel_dep(name = "rules_kotlin", version = "1.9.0")  # Added Kotlin support
 
 SPRING_BOOT_VERSION = "3.2.0"
+
+KOTLIN_VERSION = "1.9.0"  # Added Kotlin version
+
+# Repository setup for Kotlin
+kotlin = use_extension("@rules_kotlin//kotlin:extensions.bzl", "kotlin")
+kotlin.language_version(
+    name = "kotlin_language_version",
+    api_version = "1.9",
+    language_version = "1.9",
+)
+use_repo(kotlin, "kotlin_language_version")
 
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(
     name = "depwatch_maven",
     artifacts = [
+        # Existing Spring Boot and Jackson dependencies
         "org.springframework.boot:spring-boot-starter:%s" % SPRING_BOOT_VERSION,
         "org.springframework.boot:spring-boot-starter-web:%s" % SPRING_BOOT_VERSION,
         "com.fasterxml.jackson.core:jackson-annotations:2.14.2",
         "com.fasterxml.jackson.core:jackson-databind:2.14.2",
+        # Kotlin dependencies
+        "org.jetbrains.kotlin:kotlin-stdlib:%s" % KOTLIN_VERSION,
+        "org.jetbrains.kotlin:kotlin-reflect:%s" % KOTLIN_VERSION,
     ],
     fail_if_repin_required = True,
     fetch_sources = True,
@@ -36,7 +52,7 @@ oci = use_extension("@rules_oci//oci:extensions.bzl", "oci")
 # Pull the Java base image for ARM64 (M1 Mac)
 oci.pull(
     name = "java_base",
-    digest = "sha256:3718cf143b7aaec37742a61f49aba0ac9d67508e32cd98aaca0d6af422c05a31",  # ARM64 digest
+    digest = "sha256:3718cf143b7aaec37742a61f49aba0ac9d67508e32cd98aaca0d6af422c05a31",
     image = "amazoncorretto",
     platforms = [
         "linux/amd64",
