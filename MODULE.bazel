@@ -13,14 +13,14 @@ bazel_dep(name = "rules_kotlin", version = "1.9.0")  # Added Kotlin support
 
 SPRING_BOOT_VERSION = "3.2.0"
 
-KOTLIN_VERSION = "1.9.0"  # Added Kotlin version
+KOTLIN_VERSION = "1.6.0"  # Added Kotlin version
 
 # Repository setup for Kotlin
 kotlin = use_extension("@rules_kotlin//kotlin:extensions.bzl", "kotlin")
 kotlin.language_version(
     name = "kotlin_language_version",
-    api_version = "1.9",
-    language_version = "1.9",
+    api_version = "1.6",
+    language_version = "1.6",
 )
 use_repo(kotlin, "kotlin_language_version")
 
