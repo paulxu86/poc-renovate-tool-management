@@ -4,7 +4,7 @@ module(
     compatibility_level = 1,
 )
 
-bazel_dep(name = "rules_java", version = "8.9.0")
+bazel_dep(name = "rules_java", version = "8.10.0")
 bazel_dep(name = "rules_jvm_external", version = "6.7")
 bazel_dep(name = "rules_oci", version = "2.2.2")
 bazel_dep(name = "rules_pkg", version = "1.0.1")
