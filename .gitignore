@@ -28,3 +28,7 @@ replay_pid*
 /bazel-out/
 /bazel-poc-renovate-tool-management/
 /bazel-testlogs/
+/bazel-bin/
+/bazel-out/
+/bazel-poc-renovate-tool-management/
+/bazel-testlogs/
