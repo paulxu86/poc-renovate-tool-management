@@ -10,11 +10,10 @@
     "https://bcr.bazel.build/modules/abseil-cpp/20230802.1/MODULE.bazel": "fa92e2eb41a04df73cdabeec37107316f7e5272650f81d6cc096418fe647b915",
     "https://bcr.bazel.build/modules/abseil-cpp/20240116.1/MODULE.bazel": "37bcdb4440fbb61df6a1c296ae01b327f19e9bb521f9b8e26ec854b6f97309ed",
     "https://bcr.bazel.build/modules/abseil-cpp/20240116.1/source.json": "9be551b8d4e3ef76875c0d744b5d6a504a27e3ae67bc6b28f46415fd2d2957da",
+    "https://bcr.bazel.build/modules/aspect_bazel_lib/1.32.0/MODULE.bazel": "67ac1c347f4954603280a4559c2a5b7c4dfdc40950bf15eb9a77d824ef933707",
     "https://bcr.bazel.build/modules/aspect_bazel_lib/2.14.0/MODULE.bazel": "2b31ffcc9bdc8295b2167e07a757dbbc9ac8906e7028e5170a3708cecaac119f",
     "https://bcr.bazel.build/modules/aspect_bazel_lib/2.14.0/source.json": "0cf1826853b0bef8b5cd19c0610d717500f5521aa2b38b72b2ec302ac5e7526c",
-    "https://bcr.bazel.build/modules/aspect_bazel_lib/2.7.2/MODULE.bazel": "780d1a6522b28f5edb7ea09630748720721dfe27690d65a2d33aa7509de77e07",
     "https://bcr.bazel.build/modules/bazel_features/1.1.1/MODULE.bazel": "27b8c79ef57efe08efccbd9dd6ef70d61b4798320b8d3c134fd571f78963dbcd",
-    "https://bcr.bazel.build/modules/bazel_features/1.10.0/MODULE.bazel": "f75e8807570484a99be90abcd52b5e1f390362c258bcb73106f4544957a48101",
     "https://bcr.bazel.build/modules/bazel_features/1.11.0/MODULE.bazel": "f9382337dd5a474c3b7d334c2f83e50b6eaedc284253334cf823044a26de03e8",
     "https://bcr.bazel.build/modules/bazel_features/1.15.0/MODULE.bazel": "d38ff6e517149dc509406aca0db3ad1efdd890a85e049585b7234d04238e2a4d",
     "https://bcr.bazel.build/modules/bazel_features/1.17.0/MODULE.bazel": "039de32d21b816b47bd42c778e0454217e9c9caac4a3cf8e15c7231ee3ddee4d",
@@ -115,8 +114,8 @@
     "https://bcr.bazel.build/modules/rules_license/0.0.7/MODULE.bazel": "088fbeb0b6a419005b89cf93fe62d9517c0a2b8bb56af3244af65ecfe37e7d5d",
     "https://bcr.bazel.build/modules/rules_license/1.0.0/MODULE.bazel": "a7fda60eefdf3d8c827262ba499957e4df06f659330bbe6cdbdb975b768bb65c",
     "https://bcr.bazel.build/modules/rules_license/1.0.0/source.json": "a52c89e54cc311196e478f8382df91c15f7a2bfdf4c6cd0e2675cc2ff0b56efb",
-    "https://bcr.bazel.build/modules/rules_oci/2.2.5/MODULE.bazel": "9086fa85e46ca1116317f64e031403ce73eaf214ad9251ee3bdf3199734cf2ac",
-    "https://bcr.bazel.build/modules/rules_oci/2.2.5/source.json": "4cf66bdafeb0df214d43e0e4b1a442223bca421f62d38650b466cbb001894293",
+    "https://bcr.bazel.build/modules/rules_oci/1.4.0/MODULE.bazel": "196c231efd494286db1c31fef26a0608d4f8f2fadbc36246aa9a8e8354a27fa9",
+    "https://bcr.bazel.build/modules/rules_oci/1.4.0/source.json": "130602fc071d128db09b084e56af619e2d66c0890cf996ce24b1033fb154cdcf",
     "https://bcr.bazel.build/modules/rules_pkg/0.7.0/MODULE.bazel": "df99f03fc7934a4737122518bb87e667e62d780b610910f0447665a7e2be62dc",
     "https://bcr.bazel.build/modules/rules_pkg/1.0.1/MODULE.bazel": "5b1df97dbc29623bccdf2b0dcd0f5cb08e2f2c9050aab1092fd39a41e82686ff",
     "https://bcr.bazel.build/modules/rules_pkg/1.1.0/MODULE.bazel": "9db8031e71b6ef32d1846106e10dd0ee2deac042bd9a2de22b4761b0c3036453",
@@ -138,9 +137,9 @@
     "https://bcr.bazel.build/modules/rules_shell/0.2.0/MODULE.bazel": "fda8a652ab3c7d8fee214de05e7a9916d8b28082234e8d2c0094505c5268ed3c",
     "https://bcr.bazel.build/modules/rules_shell/0.3.0/MODULE.bazel": "de4402cd12f4cc8fda2354fce179fdb068c0b9ca1ec2d2b17b3e21b24c1a937b",
     "https://bcr.bazel.build/modules/rules_shell/0.3.0/source.json": "c55ed591aa5009401ddf80ded9762ac32c358d2517ee7820be981e2de9756cf3",
+    "https://bcr.bazel.build/modules/stardoc/0.5.0/MODULE.bazel": "f9f1f46ba8d9c3362648eea571c6f9100680efc44913618811b58cc9c02cd678",
     "https://bcr.bazel.build/modules/stardoc/0.5.1/MODULE.bazel": "1a05d92974d0c122f5ccf09291442580317cdd859f07a8655f1db9a60374f9f8",
     "https://bcr.bazel.build/modules/stardoc/0.5.3/MODULE.bazel": "c7f6948dae6999bf0db32c1858ae345f112cacf98f174c7a8bb707e41b974f1c",
-    "https://bcr.bazel.build/modules/stardoc/0.5.4/MODULE.bazel": "6569966df04610b8520957cb8e97cf2e9faac2c0309657c537ab51c16c18a2a4",
     "https://bcr.bazel.build/modules/stardoc/0.5.6/MODULE.bazel": "c43dabc564990eeab55e25ed61c07a1aadafe9ece96a4efabb3f8bf9063b71ef",
     "https://bcr.bazel.build/modules/stardoc/0.6.2/MODULE.bazel": "7060193196395f5dd668eda046ccbeacebfd98efc77fed418dbe2b82ffaa39fd",
     "https://bcr.bazel.build/modules/stardoc/0.7.0/MODULE.bazel": "05e3d6d30c099b6770e97da986c53bd31844d7f13d41412480ea265ac9e8079c",
@@ -238,8 +237,8 @@
     },
     "@@rules_oci+//oci:extensions.bzl%oci": {
       "general": {
-        "bzlTransitiveDigest": "8fB61KHYOU4XHH65DqVw59ZIDGO29I2WIbVHxii4slA=",
-        "usagesDigest": "wtqD089bnSJb70LmRep56h3pBKrQo5U8gyTy8S1lrwY=",
+        "bzlTransitiveDigest": "PHO9D4Y25n0vcp8zoiW6PqnVwMmSpfqoez58I9MxkUQ=",
+        "usagesDigest": "ZTkGQVpTwUmm08AvH2efHtSNcHTkKmrcE2qDSQcRNMs=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -247,34 +246,29 @@
           "java_base_linux_amd64": {
             "repoRuleId": "@@rules_oci+//oci/private:pull.bzl%oci_pull",
             "attributes": {
-              "www_authenticate_challenges": {},
               "scheme": "https",
               "registry": "index.docker.io",
               "repository": "library/amazoncorretto",
               "identifier": "sha256:e6b76ce049f4a9d1f9469f349f1b4e04faa71ca21c377a275731d66f92a3d940",
               "platform": "linux/amd64",
-              "target_name": "java_base_linux_amd64",
-              "bazel_tags": []
+              "target_name": "java_base_linux_amd64"
             }
           },
           "java_base_linux_arm64_v8": {
             "repoRuleId": "@@rules_oci+//oci/private:pull.bzl%oci_pull",
             "attributes": {
-              "www_authenticate_challenges": {},
               "scheme": "https",
               "registry": "index.docker.io",
               "repository": "library/amazoncorretto",
               "identifier": "sha256:e6b76ce049f4a9d1f9469f349f1b4e04faa71ca21c377a275731d66f92a3d940",
               "platform": "linux/arm64/v8",
-              "target_name": "java_base_linux_arm64_v8",
-              "bazel_tags": []
+              "target_name": "java_base_linux_arm64_v8"
             }
           },
           "java_base": {
             "repoRuleId": "@@rules_oci+//oci/private:pull.bzl%oci_alias",
             "attributes": {
               "target_name": "java_base",
-              "www_authenticate_challenges": {},
               "scheme": "https",
               "registry": "index.docker.io",
               "repository": "library/amazoncorretto",
@@ -287,67 +281,264 @@
               "reproducible": true
             }
           },
+          "oci_auth_config": {
+            "repoRuleId": "@@rules_oci+//oci/private:auth_config_locator.bzl%oci_auth_config_locator",
+            "attributes": {}
+          },
+          "yq_darwin_amd64": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:yq_toolchain.bzl%yq_platform_repo",
+            "attributes": {
+              "platform": "darwin_amd64",
+              "version": "4.25.2"
+            }
+          },
+          "yq_darwin_arm64": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:yq_toolchain.bzl%yq_platform_repo",
+            "attributes": {
+              "platform": "darwin_arm64",
+              "version": "4.25.2"
+            }
+          },
+          "yq_linux_amd64": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:yq_toolchain.bzl%yq_platform_repo",
+            "attributes": {
+              "platform": "linux_amd64",
+              "version": "4.25.2"
+            }
+          },
+          "yq_linux_arm64": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:yq_toolchain.bzl%yq_platform_repo",
+            "attributes": {
+              "platform": "linux_arm64",
+              "version": "4.25.2"
+            }
+          },
+          "yq_linux_s390x": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:yq_toolchain.bzl%yq_platform_repo",
+            "attributes": {
+              "platform": "linux_s390x",
+              "version": "4.25.2"
+            }
+          },
+          "yq_linux_ppc64le": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:yq_toolchain.bzl%yq_platform_repo",
+            "attributes": {
+              "platform": "linux_ppc64le",
+              "version": "4.25.2"
+            }
+          },
+          "yq_windows_amd64": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:yq_toolchain.bzl%yq_platform_repo",
+            "attributes": {
+              "platform": "windows_amd64",
+              "version": "4.25.2"
+            }
+          },
+          "yq": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:yq_toolchain.bzl%yq_host_alias_repo",
+            "attributes": {}
+          },
+          "yq_toolchains": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:yq_toolchain.bzl%yq_toolchains_repo",
+            "attributes": {
+              "user_repository_name": "yq"
+            }
+          },
+          "jq_darwin_amd64": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:jq_toolchain.bzl%jq_platform_repo",
+            "attributes": {
+              "platform": "darwin_amd64",
+              "version": "1.7"
+            }
+          },
+          "jq_darwin_arm64": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:jq_toolchain.bzl%jq_platform_repo",
+            "attributes": {
+              "platform": "darwin_arm64",
+              "version": "1.7"
+            }
+          },
+          "jq_linux_amd64": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:jq_toolchain.bzl%jq_platform_repo",
+            "attributes": {
+              "platform": "linux_amd64",
+              "version": "1.7"
+            }
+          },
+          "jq_linux_arm64": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:jq_toolchain.bzl%jq_platform_repo",
+            "attributes": {
+              "platform": "linux_arm64",
+              "version": "1.7"
+            }
+          },
+          "jq_windows_amd64": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:jq_toolchain.bzl%jq_platform_repo",
+            "attributes": {
+              "platform": "windows_amd64",
+              "version": "1.7"
+            }
+          },
+          "jq": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:jq_toolchain.bzl%jq_host_alias_repo",
+            "attributes": {}
+          },
+          "jq_toolchains": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:jq_toolchain.bzl%jq_toolchains_repo",
+            "attributes": {
+              "user_repository_name": "jq"
+            }
+          },
+          "coreutils_darwin_amd64": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:coreutils_toolchain.bzl%coreutils_platform_repo",
+            "attributes": {
+              "platform": "darwin_amd64",
+              "version": "0.0.27"
+            }
+          },
+          "coreutils_darwin_arm64": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:coreutils_toolchain.bzl%coreutils_platform_repo",
+            "attributes": {
+              "platform": "darwin_arm64",
+              "version": "0.0.27"
+            }
+          },
+          "coreutils_linux_amd64": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:coreutils_toolchain.bzl%coreutils_platform_repo",
+            "attributes": {
+              "platform": "linux_amd64",
+              "version": "0.0.27"
+            }
+          },
+          "coreutils_linux_arm64": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:coreutils_toolchain.bzl%coreutils_platform_repo",
+            "attributes": {
+              "platform": "linux_arm64",
+              "version": "0.0.27"
+            }
+          },
+          "coreutils_windows_amd64": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:coreutils_toolchain.bzl%coreutils_platform_repo",
+            "attributes": {
+              "platform": "windows_amd64",
+              "version": "0.0.27"
+            }
+          },
+          "coreutils_toolchains": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:coreutils_toolchain.bzl%coreutils_toolchains_repo",
+            "attributes": {
+              "user_repository_name": "coreutils"
+            }
+          },
+          "copy_to_directory_darwin_amd64": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:copy_to_directory_toolchain.bzl%copy_to_directory_platform_repo",
+            "attributes": {
+              "platform": "darwin_amd64"
+            }
+          },
+          "copy_to_directory_darwin_arm64": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:copy_to_directory_toolchain.bzl%copy_to_directory_platform_repo",
+            "attributes": {
+              "platform": "darwin_arm64"
+            }
+          },
+          "copy_to_directory_freebsd_amd64": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:copy_to_directory_toolchain.bzl%copy_to_directory_platform_repo",
+            "attributes": {
+              "platform": "freebsd_amd64"
+            }
+          },
+          "copy_to_directory_linux_amd64": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:copy_to_directory_toolchain.bzl%copy_to_directory_platform_repo",
+            "attributes": {
+              "platform": "linux_amd64"
+            }
+          },
+          "copy_to_directory_linux_arm64": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:copy_to_directory_toolchain.bzl%copy_to_directory_platform_repo",
+            "attributes": {
+              "platform": "linux_arm64"
+            }
+          },
+          "copy_to_directory_linux_s390x": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:copy_to_directory_toolchain.bzl%copy_to_directory_platform_repo",
+            "attributes": {
+              "platform": "linux_s390x"
+            }
+          },
+          "copy_to_directory_windows_amd64": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:copy_to_directory_toolchain.bzl%copy_to_directory_platform_repo",
+            "attributes": {
+              "platform": "windows_amd64"
+            }
+          },
+          "copy_to_directory_toolchains": {
+            "repoRuleId": "@@aspect_bazel_lib+//lib/private:copy_to_directory_toolchain.bzl%copy_to_directory_toolchains_repo",
+            "attributes": {
+              "user_repository_name": "copy_to_directory"
+            }
+          },
           "oci_crane_darwin_amd64": {
             "repoRuleId": "@@rules_oci+//oci:repositories.bzl%crane_repositories",
             "attributes": {
               "platform": "darwin_amd64",
-              "crane_version": "v0.18.0"
+              "crane_version": "v0.14.0"
             }
           },
           "oci_crane_darwin_arm64": {
             "repoRuleId": "@@rules_oci+//oci:repositories.bzl%crane_repositories",
             "attributes": {
               "platform": "darwin_arm64",
-              "crane_version": "v0.18.0"
+              "crane_version": "v0.14.0"
             }
           },
           "oci_crane_linux_arm64": {
             "repoRuleId": "@@rules_oci+//oci:repositories.bzl%crane_repositories",
             "attributes": {
               "platform": "linux_arm64",
-              "crane_version": "v0.18.0"
+              "crane_version": "v0.14.0"
             }
           },
           "oci_crane_linux_armv6": {
             "repoRuleId": "@@rules_oci+//oci:repositories.bzl%crane_repositories",
             "attributes": {
               "platform": "linux_armv6",
-              "crane_version": "v0.18.0"
+              "crane_version": "v0.14.0"
             }
           },
           "oci_crane_linux_i386": {
             "repoRuleId": "@@rules_oci+//oci:repositories.bzl%crane_repositories",
             "attributes": {
               "platform": "linux_i386",
-              "crane_version": "v0.18.0"
+              "crane_version": "v0.14.0"
             }
           },
           "oci_crane_linux_s390x": {
             "repoRuleId": "@@rules_oci+//oci:repositories.bzl%crane_repositories",
             "attributes": {
               "platform": "linux_s390x",
-              "crane_version": "v0.18.0"
+              "crane_version": "v0.14.0"
             }
           },
           "oci_crane_linux_amd64": {
             "repoRuleId": "@@rules_oci+//oci:repositories.bzl%crane_repositories",
             "attributes": {
               "platform": "linux_amd64",
-              "crane_version": "v0.18.0"
+              "crane_version": "v0.14.0"
             }
           },
           "oci_crane_windows_armv6": {
             "repoRuleId": "@@rules_oci+//oci:repositories.bzl%crane_repositories",
             "attributes": {
               "platform": "windows_armv6",
-              "crane_version": "v0.18.0"
+              "crane_version": "v0.14.0"
             }
           },
           "oci_crane_windows_amd64": {
             "repoRuleId": "@@rules_oci+//oci:repositories.bzl%crane_repositories",
             "attributes": {
               "platform": "windows_amd64",
-              "crane_version": "v0.18.0"
+              "crane_version": "v0.14.0"
             }
           },
           "oci_crane_toolchains": {
@@ -357,59 +548,13 @@
               "toolchain": "@oci_crane_{platform}//:crane_toolchain"
             }
           },
-          "oci_regctl_darwin_amd64": {
-            "repoRuleId": "@@rules_oci+//oci:repositories.bzl%regctl_repositories",
-            "attributes": {
-              "platform": "darwin_amd64"
-            }
-          },
-          "oci_regctl_darwin_arm64": {
-            "repoRuleId": "@@rules_oci+//oci:repositories.bzl%regctl_repositories",
-            "attributes": {
-              "platform": "darwin_arm64"
-            }
-          },
-          "oci_regctl_linux_arm64": {
-            "repoRuleId": "@@rules_oci+//oci:repositories.bzl%regctl_repositories",
-            "attributes": {
-              "platform": "linux_arm64"
-            }
-          },
-          "oci_regctl_linux_s390x": {
-            "repoRuleId": "@@rules_oci+//oci:repositories.bzl%regctl_repositories",
-            "attributes": {
-              "platform": "linux_s390x"
-            }
-          },
-          "oci_regctl_linux_amd64": {
-            "repoRuleId": "@@rules_oci+//oci:repositories.bzl%regctl_repositories",
-            "attributes": {
-              "platform": "linux_amd64"
-            }
-          },
-          "oci_regctl_windows_amd64": {
-            "repoRuleId": "@@rules_oci+//oci:repositories.bzl%regctl_repositories",
-            "attributes": {
-              "platform": "windows_amd64"
-            }
-          },
-          "oci_regctl_toolchains": {
+          "oci_crane_registry_toolchains": {
             "repoRuleId": "@@rules_oci+//oci/private:toolchains_repo.bzl%toolchains_repo",
             "attributes": {
-              "toolchain_type": "@rules_oci//oci:regctl_toolchain_type",
-              "toolchain": "@oci_regctl_{platform}//:regctl_toolchain"
+              "toolchain_type": "@rules_oci//oci:registry_toolchain_type",
+              "toolchain": "@oci_crane_{platform}//:registry_toolchain"
             }
           }
-        },
-        "moduleExtensionMetadata": {
-          "explicitRootModuleDirectDeps": [
-            "java_base",
-            "java_base_linux_amd64",
-            "java_base_linux_arm64_v8"
-          ],
-          "explicitRootModuleDirectDevDeps": [],
-          "useAllRepos": "NO",
-          "reproducible": false
         },
         "recordedRepoMappingEntries": [
           [
@@ -418,19 +563,9 @@
             "bazel_tools"
           ],
           [
-            "bazel_features+",
-            "bazel_tools",
-            "bazel_tools"
-          ],
-          [
             "rules_oci+",
             "aspect_bazel_lib",
             "aspect_bazel_lib+"
-          ],
-          [
-            "rules_oci+",
-            "bazel_features",
-            "bazel_features+"
           ],
           [
             "rules_oci+",
