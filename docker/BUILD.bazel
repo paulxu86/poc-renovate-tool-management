@@ -1,6 +1,5 @@
 load("@rules_oci//oci:defs.bzl", "oci_image")
-load("@rules_oci//oci:pull.bzl", "oci_pull")
-load("@rules_oci//oci:push.bzl", "oci_tarball")
+load("@rules_oci//oci/private/transitions:tarball.bzl", "oci_tarball")
 load("@rules_pkg//pkg:tar.bzl", "pkg_tar")
 
 pkg_tar(
