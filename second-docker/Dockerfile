@@ -1,3 +1,3 @@
-FROM alpine:3.21.3
+FROM alpine:3.24.3
 
 CMD ["/bin/sh"]
