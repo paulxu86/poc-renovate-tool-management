@@ -52,7 +52,7 @@ oci = use_extension("@rules_oci//oci:extensions.bzl", "oci")
 # Pull the Java base image for ARM64 (M1 Mac)
 oci.pull(
     name = "java_base",
-    digest = "sha256:77f5f0e6785c980f9de908bb3adacbbc47f89eec6e40d073cb1cacaa6bc13faf",
+    digest = "sha256:7ce090784b223ea0ecff941e40c63f48b9df25156778c56a3b259de1c85bccd0",
     image = "amazoncorretto",
     platforms = [
         "linux/amd64",
